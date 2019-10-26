@@ -36,12 +36,12 @@ $f = Archive::Extract->new( archive => "serverconsole.zip");
 $f->extract( to => "serverconsole/");
 unlink("client.zip");
 unlink("server.zip");
-unlink("serverConsole.zip");
+unlink("serverconsole.zip");
 
 my $zip = Archive::Zip->new();;
 $zip->addTree("client", "mage-client");
 $zip->addTree("server", "mage-server");
-$zip->addTree("serverConsole", "mage-server-Console");
+$zip->addTree("serverconsole", "mage-server-Console");
 $zip->addFile("startMage.bat");
 $zip->addFile("startMageWin7.bat");
 $zip->addFile("startMage.sh");
